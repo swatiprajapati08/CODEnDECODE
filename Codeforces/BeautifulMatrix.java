@@ -21,4 +21,6 @@ public class A
                               }
                               int ans=Math.abs(x-2)+Math.abs(y-2);
                               System.out.println(ans);
+               }
+}
   
