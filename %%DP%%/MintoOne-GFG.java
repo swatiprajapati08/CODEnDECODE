@@ -1,7 +1,7 @@
 
 //Minimum steps to minimize n as per given condition
-//Top-down Approach
-
+//Top-down Approach 
+//Easy Marks:2
 import java.util.*;
 import java.lang.*;
 import java.io.*;
