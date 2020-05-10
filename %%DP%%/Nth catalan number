@@ -1,0 +1,32 @@
+//Nth catalan number
+
+import java.util.*;
+import java.math.BigInteger;
+import java.io.*;
+class GFG
+ {
+	public static void main (String[] args)
+	 {
+	 Scanner sc=new Scanner(System.in);
+	 int t=sc.nextInt();
+	 while(t-->0)
+	 {
+	     int n=sc.nextInt();
+	     System.out.println(catalan(n));
+	 }
+	 }
+	 static BigInteger catalan(int n)
+	 {
+	     BigInteger bg[]=new BigInteger[n+2];
+	     bg[0]=BigInteger.ONE;
+	     bg[1]=BigInteger.ONE;
+	     for(int i=2;i<=n;i++)
+	     {
+	         bg[i]=BigInteger.ZERO;
+	         for(int j=0;j<i;j++)
+	         bg[i]=bg[i].add(bg[j].multiply(bg[i-j-1]));
+	     }
+	     return bg[n];
+	 }
+	 
+}
