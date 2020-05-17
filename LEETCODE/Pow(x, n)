@@ -1,0 +1,22 @@
+//Pow(x, n)
+
+
+
+class Solution {
+    public double myPow(double x, int n) {
+        
+         if (n < 0)
+            return 1 / myPowFrom(x, -n);
+        
+        return myPowFrom(x, n);
+    }
+    
+    private double Pow(double x, int n) {
+        if (n == 0)
+            return 1;
+
+        return n % 2 == 0 
+            ? Pow(x * x, n / 2) 
+            : Pow(x * x, n / 2) * x;
+    }
+}
